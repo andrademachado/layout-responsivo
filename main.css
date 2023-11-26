@@ -1,0 +1,188 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+}
+
+h1{
+    margin: 16px 0;
+}
+
+.container-produto {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    font-style: italic;
+   
+   
+}
+
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+   
+}
+
+header {
+    background-color: rgba(0, 106, 255, 0.867);
+    padding: 16px 0;
+    color:#fff;
+    margin: 0 auto;
+    
+}
+
+
+
+nav li  { 
+    list-style: none;
+    display: inline;
+    margin-left: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+header nav li a{
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    
+}
+
+
+.container-flex{
+    display: flex;
+    margin: 0 15%;
+}
+
+.container-flex img{
+    margin-right: 8px;
+    border: none;
+}
+
+#sobre-a-loja img{
+    max-width: 250px;
+    margin-right: 24px;
+    height: 200px;
+}
+
+
+
+section{
+    padding: 48px 0;
+}
+
+section h2{
+    margin-bottom: 32px;
+    border-bottom: 3px solid rgba(0, 106, 255, 0.867);
+    color:rgba(0, 106, 255, 0.867) ;
+    font-style: italic;
+}
+
+.lista-sapatos{
+    flex-wrap: nowrap;
+}
+
+.lista-sapatos li{
+    list-style: none;
+    max-width:22.5%;
+    margin-bottom: 24px;
+}
+
+.lista-sapatos li img{
+height: 250px;
+    
+    
+}
+
+.lista-sapatos li h3 {
+    margin: 16px 0;
+    font-size: 24px;
+}
+
+.item-central{
+    margin: 0 15%;
+}
+
+.lista-sapatos li button{
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background-color:rgba(0, 106, 255, 0.867);
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.lista-sapatos li p{
+    margin: 16px 0;
+    font-size: 24px;
+}
+
+@media screen and (max-width: 640px) {
+    .container-flex{
+        display: block;
+    
+    }
+
+    .container{
+        max-width: 90%;
+    }
+ 
+    #sobre-a-loja p{
+        display:block;
+        font-size: 1.3em;
+    }
+
+    .lista-sapatos li img{
+        height: 250px;
+    }
+
+    .item-central{
+        margin: 0 15%;
+    }
+    .lista-sapatos li h3 {
+        font-size: 24px;
+        justify-content:left;
+    }
+
+    .lista-sapatos li button{
+        display: block;
+        width: 300%;
+        padding: 14px 0;
+        border: none;
+        background-color:rgba(0, 106, 255, 0.867);
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+}
+
+@media screen and(min-width:641) and (max-width:1023) {
+
+    .container-flex .lista-sapatos {
+        grid-template-columns: repeat(2,39%);
+    } 
+    .sobre-a-loja .container-flex {
+        display:block;
+    } 
+    .container{
+        width: 90%;
+    }
+    
+}
