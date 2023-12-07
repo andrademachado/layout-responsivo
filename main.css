@@ -5,20 +5,19 @@
     font-family: Roboto, sans-serif;
 }
 
-h1{
+/* Remoção da linha h1{
     margin: 16px 0;
-}
+}*/
 
-.container-produto {
-    max-width: 1024px;
+/*Correção do container à baixo*/
+
+.container {
+    max-width: 1280px;
     width: 100%;
     margin: 0 auto;
-    font-style: italic;
-   
-   
-}
+  }
 
-.container{
+/*Remoção do container{
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
@@ -27,20 +26,35 @@ h1{
     align-items: center;
     justify-content: space-between;
 
-   
-}
+}*/
 
 header {
     background-color: rgba(0, 106, 255, 0.867);
-    padding: 16px 0;
     color:#fff;
-    margin: 0 auto;
+    padding: 8px 0;
+    margin-bottom: 56px;
     
 }
 
+/*Estilizando header.container*/
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+/*Estilizando header*/
+header h1{
+    font-size: italic;
+}
 
-nav li  { 
+/*Estilizando Navegação*/
+header nav ul{
+    list-style: none;
+    padding: 0;
+}
+
+/* Removendo essa estilização nav  { 
     list-style: none;
     display: inline;
     margin-left: 16px;
@@ -48,45 +62,55 @@ nav li  {
     font-weight: bold;
     text-transform: uppercase;
 
-}
+}*/
 
-header nav li a{
-    color: #fff;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    
+header nav ul li {
+    display: inline;
+    padding: 0 16px;
+    font-weight: bold;
 }
 
 
-.container-flex{
+/* remoção  do container-flex{
     display: flex;
     margin: 0 15%;
+}*/
+
+/*Estilizando*/
+header nav ul li a{
+    text-decoration: none;
+    color: #fff;
 }
 
-.container-flex img{
+/*Removendo container-flex img{
     margin-right: 8px;
     border: none;
-}
+}*/
 
-#sobre-a-loja img{
+/*acrescentando*/
+body{
+    background-color: #e6ebec;
+}
+/* removendo #sobre-a-loja img{
     max-width: 250px;
     margin-right: 24px;
     height: 200px;
+}*/
+
+/*Estilizando h2*/
+h2{
+    color:rgba(0, 106, 255, 0.867) ;
+    border-bottom: 2px solid rgba(0, 106, 255, 0.867) ;
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    font-style: italic;
 }
 
-
-
-section{
-    padding: 48px 0;
-}
-
+/*Estilização do h2 ocorre acima , então não há mais necessidade nesse trecho.
 section h2{
     margin-bottom: 32px;
-    border-bottom: 3px solid rgba(0, 106, 255, 0.867);
-    color:rgba(0, 106, 255, 0.867) ;
+    border-bottom: 3px solid gba(0, 106, 255, 0.867);
+    color:gba(0, 106, 255, 0.867) ;
     font-style: italic;
 }
 
@@ -100,10 +124,8 @@ section h2{
     margin-bottom: 24px;
 }
 
-.lista-sapatos li img{
+/*.lista-sapatos li img{
 height: 250px;
-    
-    
 }
 
 .lista-sapatos li h3 {
@@ -120,8 +142,8 @@ height: 250px;
     width: 100%;
     padding: 8px 0;
     border: none;
-    background-color:rgba(0, 106, 255, 0.867);
-    color: #fff;
+    background-color:
+    color: ;
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
@@ -140,14 +162,14 @@ height: 250px;
 
     .container{
         max-width: 90%;
-    }
+    }*/
  
-    #sobre-a-loja p{
-        display:block;
-        font-size: 1.3em;
+    /*Correção*/
+    #sobre-a-loja {
+        display:flex;
     }
 
-    .lista-sapatos li img{
+    /*.lista-sapatos li img{
         height: 250px;
     }
 
@@ -157,32 +179,111 @@ height: 250px;
     .lista-sapatos li h3 {
         font-size: 24px;
         justify-content:left;
+    }*/
+
+    .sobre-loja-texto{
+        padding: 16px;
     }
 
-    .lista-sapatos li button{
-        display: block;
-        width: 300%;
-        padding: 14px 0;
-        border: none;
+    button{
+        border-radius: 3px;
+        width: 100%;
+        border-style: none;
         background-color:rgba(0, 106, 255, 0.867);
         color: #fff;
-        font-size: 16px;
         font-weight: bold;
         cursor: pointer;
     }
 
-}
+    .produto{
+        border:  1px solid #CCC;
+        padding: 16px;
+        text-align: center;
+        
+    }
 
-@media screen and(min-width:641) and (max-width:1023) {
+    .produtos{
+        display: grid;
+        grid-template-columns:repeat(4, 1fr) ;
+        gap: 16px;
+        justify-items: center;
+        align-items: center;
+    }
 
-    .container-flex .lista-sapatos {
-        grid-template-columns: repeat(2,39%);
+    .produtos a img {
+        width: 100%;
+    }
+
+    section {
+        margin-top: 32px;
+        padding: 16px;
+    }
+
+
+
+@media screen  and (max-width:1023px) {
+    #sobre-loja {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sobre-a-loja-img {
+        order: 1;
+    }
+
+    .sobre-loja-texto{
+        order: 2;
+        text-align: center;
+        margin: 24px auto;
+    }
+
+    .produtos{
+        grid-template-columns: repeat(2,1fr);
+        }
     } 
-    .sobre-a-loja .container-flex {
+
+    footer{
+        background-color: rgb(89, 94, 236);
+        color: #fff;
+        padding: 16px 0;
+        bottom: 0;
+        width: 100%;
+    }
+
+    footer .container{
+        text-align: center;
+    }
+
+    @media screen and (min-width: 641px) and (max-width: 1023px){
+        .produtos {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media screen and (max-width: 640px){
+        .container{
+            max-width: 90%;
+        }
+        .sobre-loja {
+            display: block;
+            font-size: 1em;
+        }
+
+        .produtos{
+            display: inline;
+        }
+
+        .produto,
+        .produto p {
+            margin-bottom: 32px;
+        }
+    }
+
+    /*.sobre-a-loja .container-flex {
         display:block;
     } 
     .container{
         width: 90%;
     }
     
-}
+}*/
