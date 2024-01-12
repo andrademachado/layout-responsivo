@@ -29,7 +29,7 @@
 }*/
 
 header {
-    background-color: rgba(0, 106, 255, 0.867);
+    background-color: rgba(43, 62, 89, 0.867);
     color:#fff;
     padding: 8px 0;
     margin-bottom: 56px;
@@ -99,8 +99,8 @@ body{
 
 /*Estilizando h2*/
 h2{
-    color:rgba(0, 106, 255, 0.867) ;
-    border-bottom: 2px solid rgba(0, 106, 255, 0.867) ;
+    color: rgba(43, 62, 89, 0.867) ;
+    border-bottom: 2px solid  rgba(43, 62, 89, 0.867) ;
     margin-bottom: 32px;
     padding-bottom: 16px;
     font-style: italic;
@@ -189,7 +189,7 @@ height: 250px;
         border-radius: 3px;
         width: 100%;
         border-style: none;
-        background-color:rgba(0, 106, 255, 0.867);
+        background-color:  rgba(43, 62, 89, 0.867);
         color: #fff;
         font-weight: bold;
         cursor: pointer;
@@ -243,7 +243,7 @@ height: 250px;
     } 
 
     footer{
-        background-color: rgb(89, 94, 236);
+        background-color: rgba(43, 62, 89, 0.867);
         color: #fff;
         padding: 16px 0;
         bottom: 0;
